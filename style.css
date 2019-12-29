@@ -1,7 +1,7 @@
-body{
-    /*background-image:url("imgs/backgrounddark.svg");*/
-    background-image: linear-gradient(to right, #51aeff, #bc97fc, #ff76c8, #ff6e74, #ff9103);
-    background-repeat:no-repeat;
+body {
+    background: rgb(175,195,255);
+    background: radial-gradient(circle, rgba(175,195,255,1) 0%, rgba(198,255,251,1) 100%);
+    font-family: Candara;
 }
 
 /*
@@ -47,8 +47,8 @@ button:active {
 
 #navigation {
     display: block;
-    top: 50px;
-    left: 0px;
+    top: 100px;
+    left: 50px;
     width: 142px;
     height: 100%;
     position: fixed;
@@ -70,7 +70,6 @@ button:active {
 
 .navbtns:hover {
     background-color: black;
-    box-shadow: 0 0 1px #777;
 }
 
 .controlbtns {
@@ -89,7 +88,6 @@ button:active {
 
 .controlbtns:hover {
     background-color: black;
-    box-shadow: 0 0 1px #777;
 }
 
 #intro{
@@ -112,20 +110,14 @@ button:active {
     background-color: white;
     padding:10px;
     border-radius: 5px;
-    box-shadow: 0 0 5px 2px rgba(0,0,0,0.23);
     margin: auto;
     margin-bottom: 20px;
     width: 60%;
 }
 
 .pic {
-    width: 100px;
-    height: 250px;
-}
-
-
-#piccontainer{
-    width: 15%;
+    width: 80%;
+    margin: 20px;
 }
 
 table {
