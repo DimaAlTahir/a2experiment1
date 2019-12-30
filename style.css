@@ -2,19 +2,15 @@ body {
     background: rgb(175,195,255);
     background: radial-gradient(circle, rgba(175,195,255,1) 0%, rgba(198,255,251,1) 100%);
     font-family: Candara;
+    margin: 0;
 }
 
-/*
-.header {
+.center {
     display: block;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 112px;
-    position: fixed;
-    background-color: grey;
-    border:1px solid white;
-}*/
+    margin-left: auto;
+    margin-right: auto;
+    width: 10%;
+}
 
 h1{
     margin-top: 40px;
@@ -28,7 +24,7 @@ h3{
 
 button:visited {
     text-decoration: none;
-    color: black;
+    color: #0e1e40;
 }
 
 button:hover {
@@ -45,10 +41,15 @@ button:active {
     padding: 10px;
 }
 
+
+#navigationTiny{
+    display: none;
+}
+
 #navigation {
     display: block;
-    top: 100px;
-    left: 50px;
+    topnav: 0;
+    left: 0;
     width: 142px;
     height: 100%;
     position: fixed;
@@ -56,7 +57,8 @@ button:active {
 
 .navbtns {
     cursor: pointer;
-    background-color: white;
+    background-color: #0e1e40;
+    color: white;
     border-radius: 5px;
     font-size: 100%;
     text-decoration: none;
@@ -69,32 +71,13 @@ button:active {
 }
 
 .navbtns:hover {
-    background-color: black;
+    background-color: #0789ed;
 }
 
-.controlbtns {
-    cursor: pointer;
-    background-color: white;
-    border-radius: 5px;
-    color: black;
-    font-size: 100%;
-    text-decoration: none;
-    border: none;
-    padding:5px;
-    margin: 10px;
-    width: 100%;
-    text-align: center;
-}
-
-.controlbtns:hover {
-    background-color: black;
-}
-
-#intro{
-    float: left;
-    width: 75%;
-    height: 330px;
-    margin-bottom: 20px;
+.pic{
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
 }
 
 #btns {
@@ -102,11 +85,10 @@ button:active {
     top: 40px;
     position: fixed;
     right:20%;
-
 }
 
 .container{
-    text-align: center;
+    text-align: justify;
     background-color: white;
     padding:10px;
     border-radius: 5px;
@@ -116,59 +98,163 @@ button:active {
 }
 
 .pic {
-    width: 80%;
-    margin: 20px;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p{
+    margin-right: 5%;
+    margin-left: 5%;
 }
 
 table {
-    clear: both;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
+    border-collapse: collapse;
+}
+th {
+    background: #333;
+    color: white;
+    font-weight: bold;
+}
+td, th {
+    padding: 10px;
+    text-align: left;
+}
+
+@media
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+    .center{
+        width: 30%;
+    }
+
+    .container{
+        width: 90%;
+    }
+
+    #navigation{
+        display: none;
+    }
+
+    #navigationTiny{
+        text-decoration: none;
+        top: 50px;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        display: block;
+    }
+
+    /* Force table to not be like tables anymore */
+    table, thead, tbody, th, td, tr {
+        display: block;
+        text-align: justify;
+    }
+
+    /* Hide table headers (but not display: none;, for accessibility) */
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    td {
+        /* Behave  like a "row" */
+        border: none;
+        position: relative;
+    }
+
+    td:before {
+        /* Now like a table header */
+        position: absolute;
+        /* Top/left values mimic padding */
+        top: 6px;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+    }
+
+    .pic{
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #0e1e40;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
     text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
 }
 
-.c-nav-wrap{
-    text-align:center;
-    top: 0px;
-    margin-top: 0px;
-}
-/*
-.c-nav-wrap:after{
-    content:"";
-    position:absolute;
-    height:1px;
-    background-color:#ecf0f1;
-    width:100%;
-    top:20%;
-    left:0
-}
-*/
-.c-nav__item {
-    display:block;
-    font-size:14px;
-    letter-spacing:2px;
-    text-transform:uppercase;
+.topnav a:hover {
+    background-color: #ddd;
+    color: #0e1e40;
 }
 
-@media (min-width:40em){
-    .c-nav__item:not(:last-child){
-        margin-right:8px
+.topnav a.active {
+    background-color: #0789ed;
+    color: white;
+}
+
+.topnav .icon {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+        float: right;
+        display: block;
     }
 }
 
-@media (min-width:64em){
-    .c-nav__item:not(:last-child){
-        margin-right:16px
+@media screen and (max-width: 600px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
     }
 }
 
-@media (min-width:40em){
-    .c-nav__item{display:inline-block
-    }
+#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #0e1e40; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
 }
 
-.c-nav__link{
-    display:block;
-}
-
-svg:not(:root){
-    overflow:hidden
+#myBtn:hover {
+    background-color: #0789ed; /* Add a dark-grey background on hover */
 }
